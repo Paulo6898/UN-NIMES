@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UNÂNIMES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Anton', sans-serif;
+      background-color: #0b0b0b;
+      color: #f5f5f5;
+    }
+
+    .animate-fadeInUp {
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.3s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.6s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.9s;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body class="text-white">
+  <!-- Menu Fixo -->
+  <header class="fixed top-0 left-0 w-full bg-black z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#inicio" id="logo-link" class="text-2xl tracking-widest uppercase text-white hover:text-gray-300 transition">UNÂNIMES</a>
+      <nav class="space-x-6">
+        <a href="#inicio" class="hover:text-gray-300 transition">Início</a>
+        <a href="#livros" class="hover:text-gray-300 transition">Livros</a>
+        <a href="#contato" class="hover:text-gray-300 transition">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Seção Inicial com imagem de fundo -->
+  <section id="inicio" class="h-screen w-full bg-cover bg-center relative flex items-center justify-center pt-16"
+    style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://i.postimg.cc/hjc4jV6r/Sem-T-tulo-1.jpg');">
+    <div class="text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-bold tracking-widest uppercase mb-4 animate-fadeInUp delay-1">
+        QUEM SOU EU?
+      </h1>
+      <p class="text-lg md:text-2xl tracking-wide uppercase mb-8 animate-fadeInUp delay-2">
+        É uma pergunta simples com muitas respostas.
+      </p>
+      <a href="https://pay.kirvano.com/53c20bf5-9ffd-4ebc-af38-8e870c696edb" target="_blank"
+  class="bg-black text-white px-8 py-4 rounded-xl text-sm tracking-widest uppercase animate-fadeInUp delay-3 transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105">
+  Compre agora
+</a>
+    </div>
+  </section>
+
+  <!-- Seção Livros -->
+  <section id="livros" class="max-w-7xl mx-auto px-6 py-20 animate-fadeInUp delay-2 text-center">
+    <h2 class="text-4xl uppercase tracking-widest text-center mb-10">Livros</h2>
+    <p class="text-lg mb-10 italic text-gray-300">"O verdadeiro autoconhecimento começa com coragem para se perguntar: quem sou eu, além do que me disseram?"</p>
+    <div class="flex justify-center">
+      <button onclick="alert('Em breve')" class="bg-transparent text-white px-6 py-6 rounded-xl transition duration-300 shadow-lg hover:shadow-2xl hover:scale-110">
+        <div class="flex flex-col items-center">
+          <img src="https://i.postimg.cc/hjc4jV6r/Sem-T-tulo-1.jpg" alt="Capa do Livro" class="w-40 h-56 object-cover rounded-md mb-4" />
+          <span class="uppercase tracking-widest text-sm">Livro (Quem Sou Eu - Edição Completa)</span>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-black text-gray-400 py-10">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+      <div>
+        <h3 class="text-white text-lg uppercase mb-4">Sobre</h3>
+        <p>Projeto UNÂNIMES dedicado a livros de autoconhecimento. Nossa missão é ajudar você a se entender melhor.</p>
+      </div>
+      <div>
+        <h3 class="text-white text-lg uppercase mb-4">Links Rápidos</h3>
+        <ul class="space-y-2">
+          <li><a href="#inicio" class="hover:text-white">Início</a></li>
+          <li><a href="#livros" class="hover:text-white">Livros</a></li>
+          <li><a href="#contato" class="hover:text-white">Contato</a></li>
+          <li><span class="text-white">41 996871417</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white text-lg uppercase mb-4">Redes</h3>
+        <div class="flex space-x-4">
+          <a href="https://wa.me/5541996871417" target="_blank" class="hover:text-white">WhatsApp</a>
+          <a href="https://www.tiktok.com/@unanimes.livros" target="_blank" class="hover:text-white">TikTok</a>
+          <a href="https://www.instagram.com/_quems0ueu" target="_blank" class="hover:text-white">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center text-gray-500 text-xs mt-8">&copy; 2025 UNÂNIMES. Todos os direitos reservados.</div>
+  </footer>
+
+  <script>
+    document.getElementById('logo-link').addEventListener('click', function (event) {
+      event.preventDefault();
+      document.getElementById('inicio').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
+</body>
+
+</html>
